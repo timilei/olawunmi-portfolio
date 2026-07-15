@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academic Planner | Timileyin Oladipupo</title>
+  <meta name="description" content="Interactive academic task planner for tracking assignments and coursework deadlines.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="navbar" aria-label="Primary navigation">
+      <a href="index.html" class="brand">
+        <img src="169227.png" alt="Timgold Cybersecurity Solutions logo">
+        <span class="brand-text">
+          <strong>Timgold</strong>
+          <span>CYBERSECURITY SOLUTIONS</span>
+        </span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="planner.html">Planner</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="page-header">
+      <div class="container">
+        <p class="eyebrow prompt">run academic_planner.js</p>
+        <h1>Academic Planner</h1>
+        <p>Add assignments, track deadlines, and mark tasks complete — all saved right in your browser.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+
+        <!-- Stats -->
+        <div class="planner-stats">
+          <div class="stat-card">
+            <div class="num" id="statTotal">0</div>
+            <div class="label">Total Tasks</div>
+          </div>
+          <div class="stat-card">
+            <div class="num" id="statPending">0</div>
+            <div class="label">Pending</div>
+          </div>
+          <div class="stat-card">
+            <div class="num" id="statDone">0</div>
+            <div class="label">Completed</div>
+          </div>
+        </div>
+
+        <!-- Add Task Form -->
+        <form id="taskForm" class="task-form" novalidate>
+          <div class="field">
+            <label for="taskTitle">Task / Assignment</label>
+            <input type="text" id="taskTitle" name="taskTitle" placeholder="e.g. Submit NIDS lab report" required>
+          </div>
+          <div class="field">
+            <label for="taskCourse">Course (optional)</label>
+            <input type="text" id="taskCourse" name="taskCourse" placeholder="e.g. COS 106">
+          </div>
+          <div class="field">
+            <label for="taskDue">Due Date</label>
+            <input type="date" id="taskDue" name="taskDue">
+          </div>
+          <div class="field">
+            <label for="taskPriority">Priority</label>
+            <select id="taskPriority" name="taskPriority">
+              <option value="low">Low</option>
+              <option value="medium" selected>Medium</option>
+              <option value="high">High</option>
+            </select>
+          </div>
+          <div class="field" style="justify-content:flex-end;">
+            <button type="submit" class="btn btn-primary">Add Task</button>
+          </div>
+        </form>
+
+        <!-- Task Columns -->
+        <div class="task-columns">
+          <div class="task-col pending">
+            <h3><span class="dot"></span>Pending</h3>
+            <ul class="task-list" id="pendingList"></ul>
+          </div>
+          <div class="task-col done">
+            <h3><span class="dot"></span>Completed</h3>
+            <ul class="task-list" id="completedList"></ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-brand">
+            <img src="169227.png" alt="Timgold Cybersecurity Solutions logo">
+            <strong>Timgold Cybersecurity Solutions</strong>
+          </div>
+          <p>Building a safer digital world, one network at a time.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Site</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="planner.html">Planner</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:o.timileyin6831@miva.edu.ng">o.timileyin6831@miva.edu.ng</a></li>
+            <li><a href="tel:09076418451">09076418451</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Timileyin Oladipupo · Timgold Cybersecurity Solutions</span>
+        <span>COS 106 — Introduction to Web Technologies</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
